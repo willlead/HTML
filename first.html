@@ -3,11 +3,23 @@
 	<!--나의 첫 헤드-->
 	<head>
 		<title> 윤성렬::HTML</title>
+		<!-- 
+		link는 css 파일 불러와서 적용하기 
+		rel, type, href 순서는 상관 없다.
+		rel, type 값은 고정
+		href 값은 css 파일 경로 
+		-->
+		<link rel="stylesheet" type="text/css" href="css/baic_style.css">
+		<style>
+			li{color:red;}
+		</style>
+		
 	</head>
+	
 	
 	<!--하이루-->
 	<body>
-		<h1 style = "font-size:50pt;">
+		<h1 style = "color:blue;">
 			My First Head
 		</h1>
 		<!-- 창 크기에 따라 한줄에 표현하는 글자를 자동으로 조정해준다.-->
@@ -41,6 +53,16 @@
 		내 사이트는 _self
 		외부 사이트면 _blank		
 		-->
+		<!-- 
+		절대 경로 지정 방식
+		https:// www.w3school.com:777/images/pictures.jpg
+		https: 프로토콜
+		www.w3schools.com : 도메인
+		:777  : 포트 생략 가능
+		images: 폴더 이름
+		pictures.jpg : 파일 이름.
+		
+		-->
 		<a href = "https://www.naver.com" target ="-_blank">네이버</a><br>
 		
 		<!-- 
@@ -63,9 +85,9 @@
 			<li>우유</li>
 		</ul>
 		<ol>
-			<li>커피</li>
-			<li>차</li>
-			<li>우유</li>
+			<li style="color :red">커피</li>
+			<LI>차</li>
+			<li>우유</lI>
 		</ol>
 		
 	</body>
