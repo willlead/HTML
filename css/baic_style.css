@@ -1,10 +1,21 @@
-h1 
-{
-	color:green;
+/* 	메인칼라 : green
+	강조색: toamto
+	메인 배경 : #b1f2b1
+*/
+
+*{
+	margin:0;
+	padding:0;
 }
 
-p
-{
-	background-color:#cccccc;
-	padding:20px;
+h1 {
+	color:green;
+	font-size=30px;
+	border-bottom:3px solid green;
+	margin:10px;
+}
+
+
+p{ 	padding:20px;
+	margin:10px;
 }
