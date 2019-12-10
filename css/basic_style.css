@@ -2,11 +2,11 @@
 	강조색: toamto
 	메인 배경 : #b1f2b1
 */
-
 *{
 	margin:0;
 	padding:0;
 }
+
 
 h1 {
 	color:green;
@@ -19,3 +19,13 @@ h1 {
 p{ 	padding:20px;
 	margin:10px;
 }
+
+kbd{
+	border:1px solid black;
+	padding:2px 4px;
+}
+
+ul{	margin:10px;}
+ol{	margin:10px;}
+li{	margin:10px;}
+
