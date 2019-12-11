@@ -2,11 +2,6 @@
 	강조색: toamto
 	메인 배경 : #b1f2b1
 */
-*{
-	margin:0;
-	padding:0;
-}
-
 
 h1 {
 	color:green;
@@ -25,9 +20,36 @@ kbd{
 	padding:2px 4px;
 }
 
+/*
 ul{	margin:10px 20px;
 	list-style-type:square}
 ol{	margin:10px 20px;
 	list-style-type:upper-roman}
 li{	margin:0 20px;}
+*/
 
+
+/*table, th, td{border:1px solid black;}*/
+table{
+	width:80%;
+	margin:20 auto;
+	border:1px solid black;
+	border-collapse:collapse;
+}
+
+th{border:1px solid black}
+td{border:1px solid black}
+
+thead{
+	background-color:#b1f2b1;
+	font-weight:bold;
+	text-align:center;
+	border-bottom: 3px double green;
+}
+
+tfoot{
+	background-color:#b1f2b1;
+	font-weight:bold;
+	color:white;
+	border-top: 3px double green;
+}
