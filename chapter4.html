@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "ko">
+	<head>
+		<meta charset = "utf-8">
+		<title> 기관명 - 문서명</title>
+		<link rel = "stylesheet" type="text/css" href = "css/basic_style.css">		
+	</head>
+	<body>
+		<fieldset>
+			<legend> 수강과목 1과목 선택</legend>
+			<select name="subject" size="3" multiple="">
+				<option value="eng">영어회화</option>
+				<option value="cha">중국회화</option>
+				<option value="ger">독어회화</option>				
+			</select>
+		</fieldset>
+		<select id="class">
+			<optgroup label="공과대학">
+				<option value="archi">건축공학과</option>
+				<option value="mechanic">기계공학과</option>
+			</optgroup>
+			<optgroup label="인문대학">
+				<option value="history">사학과</option>
+				<option value="lang">어문학과</option>
+			</optgroup>
+		</select>
+		<form>
+		<fieldset>
+			<input type="text" id="interest" list="choices" />
+			<datalist id="choices">
+				<option value="grammer" label="문법"></option>
+				<option value="voca" label="어휘"></option>
+				<option value="speaking" label="회화"></option>
+				<option value="listening" label="리스닝"></option>				
+			</datalist>
+		</fieldset>
+		<button type="submit">전송</button>		
+		<button type="reset">다시쓰기</button>
+		<button onclick="window.open()">
+			새창만들기
+			<img src="images/workplace.jpg" /> 
+		</button>
+		<input type="submit" />
+		</form>
+		
+		<form oninput="result.value= parseInt(num1.value)+ parseInt(num2.value)">			
+				<input type="number" name="num1" value="0" />
+				+ <input type="number" name="num2" value="0" />
+			 	= <output name="result" for="num"></output>			
+		</form>
+		
+		<form>
+			<progress value="0.5"></progress>
+		</form>
+		
+		<form>
+			<ul>
+				<li>작은값: <meter min="0" max="100" low="30" optimum="50" high="70" value="20"></meter></li>
+				<li>적합값: <meter min="0" max="100" low="30" optimum="50" high="70" value="50"></meter></li>
+				<li>큰값: <meter min="0" max="100" low="30" optimum="50" high="70" value="80"></meter></li>
+			</ul>
+		</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

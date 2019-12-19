@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>display 속성</title>
+		<style>
+			img{
+				border: 5px solid red;
+			}
+
+			nav ul li{
+				display:inline-block;				
+			}
+			nav ul li a:link{
+				text-decoration:none;
+				color:white;
+				font-weight: bold;
+				font-size:20px;
+				background-color:#498949;
+				padding:20px;
+			}
+			
+			nav ul li a:visited{
+				color:white;
+			}
+			
+			nav ul li a:hover{
+				background-color:red;
+			}
+			
+			#block img{
+				display:block;
+				margin:20px;
+				border-top-left-radius: 30px;	
+				border-bottom-right-radius:30px;
+				border:10px solid silver;
+				float:left;			
+			}		
+			
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="chapter3.html">애완견 종류</a></li>
+				<li><a href="#">입양하기</a></li>
+				<li><a href="#">건강돌보기</a></li>
+				<li><a href="#">더불어살기</a></li>
+			</ul>	
+		</nav>
+		<div id="inline">
+			<img src="images/pic1.jpg">
+			<img src="images/pic2.jpg">
+			<img src="images/pic3.jpg">
+		</div>
+		<div id="block">
+			<img src="images/pic1.jpg">
+			<img src="images/pic2.jpg">
+			<img src="images/pic3.jpg">
+		</div>
+	</body>
+</html>
