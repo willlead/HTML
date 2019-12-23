@@ -1,0 +1,336 @@
+메일함으로 바로가기본문으로 바로가기
+사용자 링크
+내 프로필 이미지 willl..내정보 보기
+알림
+서비스 더보기
+
+메일검색
+<!DOCTYPE html>
+2019-12-23 (월) 15:03
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <title>Chapter12</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    nav {
+
+      background-color: #008000;
+
+    }
+
+    nav ul li {
+
+      display: inline-block;
+
+    }
+
+    nav a:link,
+    nav a:visited {
+
+      padding: 20px 10px;
+
+      display: block;
+
+      color: #fff;
+
+      width: 150px;
+
+      text-decoration: none;
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+      text-align: center;
+
+    }
+
+    nav a:hover,
+    nav a:active {
+
+      text-shadow: 0px 2px 2px #000;
+
+      color: #fc0;
+
+      background-color: red;
+
+    }
+
+    input:focus {
+
+      border: 2px solid red;
+
+    }
+
+    input:disabled {
+
+      border: 5px solid black
+    }
+
+    input[type=radio]:checked+span {
+
+      color: red;
+
+      font-weight: bold;
+
+    }
+
+    table,
+    th,
+    td {
+
+      border: 1px solid gray;
+
+      border-collapse: collapse;
+
+    }
+
+    th,
+    td {
+
+      padding: 10px 0;
+
+    }
+ 
+    table tbody tr:nth-of-type(4){
+      background-color: yellow;
+    }
+
+    table tbody tr:nth-of-type(3){
+      color: red;
+      background-color: #cccccc;
+    }
+
+    table tbody tr:hover {
+        color: green;
+        font-weight: bold;
+    } 
+  </style>
+
+</head>
+
+<body>
+
+  <div>
+
+    <header>
+
+      <h1>Chapter12</h1>
+
+    </header>
+
+    <nav>
+
+      <ul>
+
+        <li><a href="#">이용 안내</a></li>
+
+        <li><a href="#">객실 소개</a></li>
+
+        <li><a href="#">예약 방법 및 요금</a></li>
+
+        <li><a href="#">예약 하기</a></li>
+
+      </ul>
+
+    </nav>
+
+    <div>
+
+      <label>아이디 : <input type="text" /></label>
+
+      <label>비밀번호 : <input type="password" /></label><br>
+
+      <fieldset>
+
+        <legend>신청 과목</legend>
+
+        <p>이달에 신청할 과목을 선택하시오</p>
+
+        <label><input type="radio" name="subject" value="speaking" /><span>회화</span></label>
+
+        <label><input type="radio" name="subject" value="grammar" /><span>문법</span></label>
+
+        <label><input type="radio" name="subject" value="writing" /><span>작문</span></label>
+
+      </fieldset>
+
+
+
+      <table class="table table-bordered">
+
+        <thead>
+
+          <tr>
+
+            <th>번호</th>
+
+            <th>제목</th>
+
+            <th>작성자</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+
+
+
+
+          <tr>
+
+            <td>1</td>
+
+            <td>공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다.</td>
+
+            <td>정종</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>2</td>
+
+            <td>국회는 의장 1인과 부의장 2인을 선출한다. 모든 국민은 통신의 비밀을 침해받지 아니한다.</td>
+
+            <td>광개토대왕</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>3</td>
+
+            <td>대통령이 궐위된 때 또는 대통령 당선자가 사망하거나 판결 기타의 사유로 그 자격을 상실한 때에는 60일 이내에 후임자를 선거한다.</td>
+
+            <td>조려</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>4</td>
+
+            <td>공무원인 근로자는 법률이 정하는 자에 한하여 단결권·단체교섭권 및 단체행동권을 가진다.</td>
+
+            <td>조려</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>5</td>
+
+            <td>모든 국민은 신체의 자유를 가진다. 누구든지 법률에 의하지 아니하고는 체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과 적법한 절차에 의하지 아니하고는 처벌·보안처분 또는
+              강제노역을 받지 아니한다.</td>
+
+            <td>손병희</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>6</td>
+
+            <td>위원은 정당에 가입하거나 정치에 관여할 수 없다. 헌법개정안은 국회가 의결한 후 30일 이내에 국민투표에 붙여 국회의원선거권자 과반수의 투표와 투표자 과반수의 찬성을 얻어야 한다.
+            </td>
+
+            <td>하위지</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>7</td>
+
+            <td>국회의 회의는 공개한다. 다만, 출석의원 과반수의 찬성이 있거나 의장이 국가의 안전보장을 위하여 필요하다고 인정할 때에는 공개하지 아니할 수 있다.</td>
+
+            <td>이순신</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>8</td>
+
+            <td>의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.</td>
+
+            <td>백결</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>9</td>
+
+            <td>대한민국의 영토는 한반도와 그 부속도서로 한다. 모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</td>
+
+            <td>신숙주</td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td>10</td>
+
+            <td>군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다.</td>
+
+            <td>대조영</td>
+
+          </tr>
+
+
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <footer>
+
+      <p>
+
+        &copy; Copyright by ezen
+
+      </p>
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
+
+
+맨위로
