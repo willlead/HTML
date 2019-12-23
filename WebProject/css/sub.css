@@ -1,0 +1,13 @@
+div#contents{
+    padding: 5px;
+}
+nav#sub_menu{
+    padding: 5px;
+    width: 200px;
+    float: left;
+}
+section{
+    padding: 5px;
+    width: 985px;
+    float: right;
+}

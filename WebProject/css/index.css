@@ -1,0 +1,21 @@
+div#main_pic{
+    padding: 5px;
+}
+div#news{
+    padding: 5px;
+}
+section#new_course{
+    padding: 5px;
+    width: 400px;
+    float: left;
+}
+section#new_info{
+    padding: 5px;
+    width: 400px;
+    float: left;
+}
+article{
+    padding: 5px;
+    width: 385px;
+    float: right;
+}

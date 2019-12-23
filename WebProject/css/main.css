@@ -1,0 +1,68 @@
+header, nav, div, section, article, footer{
+    border: 1px dotted gray;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    padding: 5px;
+}
+
+header h1{
+    margin: 20px;
+    text-align: center;
+}
+/* 로그인 오른쪽 정렬 마진 제거 */
+div#member ul{
+    text-align: right;
+    margin: 0;
+}
+/* 로그인 인라인블록?? */
+div#member li{
+    display: inline-block;        
+}
+/* 로그인 회원가입 색상 폰트 설정  */
+div#member a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav{
+    padding:0;
+}
+nav#top_menu ul{
+    background-color: darkblue;
+    margin: 0;
+}
+nav#top_menu li{
+    display: inline-block;
+    padding:  20px 20px;    
+}
+
+nav#top_menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
+nav#top_menu a:hover{
+    background-color: red;
+}
+
+div#contents{
+    padding: 5px;
+}
+
+footer{
+    clear: both;
+    padding: 5px;
+}
+
+body{
+    width: 1200px;
+    margin: auto;
+}
