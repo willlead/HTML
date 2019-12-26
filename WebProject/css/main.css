@@ -1,6 +1,6 @@
-header, nav, div, section, article, footer{
+/* header, nav, div, section, article, footer{
     border: 1px dotted gray;
-}
+} */
 
 *{
     box-sizing: border-box;
@@ -14,6 +14,12 @@ header h1{
     margin: 20px;
     text-align: center;
 }
+
+header h1 a{
+    text-decoration: none;
+    color: black;
+}
+
 /* 로그인 오른쪽 정렬 마진 제거 */
 div#member ul{
     text-align: right;
@@ -60,6 +66,16 @@ div#contents{
 footer{
     clear: both;
     padding: 5px;
+    background-color: #666666;
+    color: white;
+}
+
+footer div{
+    padding-left: 10px;
+}
+footer div#short-cut a{
+    text-decoration: none;
+    color: white;
 }
 
 body{
