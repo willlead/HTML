@@ -1,0 +1,45 @@
+
+
+div#main_pic{
+	padding:5px;
+}
+div#news{
+	padding:5px;
+}
+section#new_course{
+	width:400px;
+	padding:5px;
+	float:left;
+}
+section#new_info{
+	width:400px;
+	padding:5px;
+	float:left;
+}
+article{
+	width:375px;
+	padding:5px;
+	float:right;
+}
+#main_pic {
+	width: 1200px;
+}
+
+#title h1 {
+	width: 600px;
+	text-align: right;
+	margin-right: 100px;
+
+}
+
+#main_pic {
+	padding: 0px;
+	margin: 0px;
+}
+
+#title h1,
+#title div {
+	display: inline-block;
+}
+
+

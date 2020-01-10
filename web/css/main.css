@@ -1,0 +1,76 @@
+li, header, nav, div, section, article, footer{
+	/* border: 1px dotted gray; */
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	width: 1200px;
+	margin: auto;
+}
+header{
+	padding:5px;
+	background-color:  orange;
+}
+
+#main_pic {
+	width: 1200px;
+}
+
+#title h1 {
+	width: 600px;
+	text-align: right;
+	margin-right: 100px;
+
+}
+
+#main_pic {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+#title h1,
+#title div {
+	display: inline-block;
+}
+
+
+nav{
+	padding:0;
+}
+
+nav#top_menu ul{
+	background-color:orange;
+	margin:0;
+	text-align: left;
+	
+}
+nav#top_menu li{
+	display: inline-block;
+	text-align: center;
+}
+nav#top_menu a{
+	display:block;
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+	font-size : 20px;
+	padding: 20px;
+}
+nav#top_menu a:hover{
+	color: orangered;
+}
+
+div#contetns{
+	padding:5px;
+}
+
+footer{
+	clear:both;
+	padding:5px;
+	background-color: #666666;
+	color:white;
+}
+
