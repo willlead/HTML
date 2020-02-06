@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+
+	</style>
+	<script>
+		$(document).ready(function () {
+			// $(window).scroll(function(){
+			// 	// alert("스코롤 햇냐?");
+			// 	console.log($(window).scrollTop());
+			// })
+
+			for (var i = 0; i < 20; i++) {
+				$("<h1>무한 스크롤 예제</h1>").appendTo("body");
+			}
+			$(window).scroll(function () {
+				//0(스크롤 탑의 위치값)+ 1000
+				var sh = $(window).scrollTop() + $(window).height();
+				//1500(바디의 높이)
+				var dh = $(document).height();
+
+				// 
+				if (sh >= dh - 200) {
+					for (var i = 0; i < 20; i++) {
+						$("<h1>무한 스크롤 예제</h1>").appendTo("body");
+					}
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- <img src="../images/Koala.jpg">
+	<img src="../images/Penguins.jpg">
+	<img src="../images/Tulips.jpg"> -->
+</body>
+
+</html>

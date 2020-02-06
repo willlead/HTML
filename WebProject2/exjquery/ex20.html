@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+
+	</style>
+	<script>
+		$(document).ready(function () {
+			// $(선택자).on("이벤트 이름", 매서드);
+			// - 현재 객체에만 이벤트가 발생
+			// $("h1").on("click",function(){
+			// 	var len = $("h1").length;
+			// 	var h = $(this).html();
+			// 	$("#wrap").append("<h1>"+h+"-"+len+"</h1>");
+			// });
+
+			// $(선택자).on("이벤트 이름", "선택자", 매서드);
+			// - 현재, 미래에 존재할 객체에도 이벤트가 발생
+			$("#wrap").on("click", "h1", function () {
+				var len = $("h1").length;
+				var h = $(this).html();
+				$("#wrap").append("<h1>" + h + "-" + len + "</h1>");
+			});
+		});
+
+
+	</script>
+</head>
+
+<body>
+	<div id="wrap">
+		<h1>메르스</h1>
+	</div>
+</body>
+
+</html>

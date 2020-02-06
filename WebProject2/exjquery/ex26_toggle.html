@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>		
+		#news{
+			display: none;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {			
+			$("button").click(function(){
+				$("#news").toggle("slow");
+			});			
+		});
+	</script>
+</head>
+
+<body>	
+	<button>뉴스보기</button>
+	<div id="news">
+		<h1>소식없는 집토끼</h1>
+		<p>모든 국민은 거주·이전의 자유를 가진다. 
+			광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 
+			일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다.</p>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="Ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>제이쿼리 플러그인</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/favicon13.ico"/>
+		<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+		<!-- 플러그인사용하기1_1. css폴더에 jquery-ui.min.css 플러그인 추가 -->
+		
+		<script src="js/jquery-1.11.3.min.js"></script>	
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- 플러그인사용하기1_2. js폴더에 jquery-ui.min.js 플러그인 추가 -->
+
+<!-- 플러그인 ! -->
+
+<!-- 단순예제....... -->
+		<style>
+			img{
+				/* display:none;    이미지 가려진 상태로 설정 */
+			}
+		</style>
+		<script>	
+			$(document).ready(function() {
+				$(this).click(function(){
+					//$('img').show('explode',1000); // 1.
+					//$('img').hide('explode',1000); // 2.
+					$('img').toggle('explode',1000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!--<button>그림보기</button><br/> <!--1.--> 
+		<button>그림감추기</button><br/> <!--2.-->
+		<img src="images/car_green.jpg" />
+	</body>
+</html>

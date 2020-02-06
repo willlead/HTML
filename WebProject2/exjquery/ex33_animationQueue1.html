@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		div {
+			width: 50px;
+			height: 50px;
+			background-color: orange;
+			position: relative;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$("div").click(function(){
+				$(this).animate({
+					left: "+=50"
+				},2000).animate({
+					width: "+=50"
+				}, 2000).animate({
+					height:"+=50"
+				}, 2000);
+			});
+			$("button").click(function(){
+				$("div").clearQueue();
+			});
+		});
+		
+	</script>
+</head>
+
+<body>
+	<button>큐비우기</button>
+	<div></div>
+</body>
+
+</html>

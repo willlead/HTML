@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="Ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>제이쿼리 플러그인</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/favicon13.ico"/>
+		<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+		<!-- 플러그인사용하기1_1. css폴더에 jquery-ui.min.css 플러그인 추가 -->
+		
+		<script src="js/jquery-1.11.3.min.js"></script>	
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- 플러그인사용하기1_2. js폴더에 jquery-ui.min.js 플러그인 추가 -->
+
+<!-- 플러그인 ! -->
+		<style>
+			.reverse {
+				background-color:orange;
+				color:red;
+			}
+		</style>
+
+		<script>		
+		// 플러그인으로 'reverse' 메소드 활용하기
+		
+			$(document).ready(function() {
+/*
+ 			// 1초 시간동안 reverse동작이 머무르면서 바뀌게 만들기
+ 			 
+ 			//$(선택자).hover(function(){},function(){});
+				$('h1').hover(function(){
+					$(this).addClass('reverse',1000); // addClass에 1초시간동안 reverse동작이 머무르게 할 수 있음.
+				},function(){
+					$(this).removeClass('reverse',1000);
+				}); 
+*/				
+/*
+ 			// 클릭으로 글자&글자배경색을 변경(true) 또는 원래대로(false) 바꾸기
+ 			 
+ 				var sw=[false, false, false];
+				var i;			
+				$('h1').click(function(){		
+					i=$(this).index();
+					if(sw[i]==false){
+						$(this).addClass('reverse',1000);
+						sw[i]=true;
+					}else{
+						$(this).removeClass('reverse',1000);
+						sw[i]=false;
+					}
+				}); 
+*/
+			
+			// 스위치클래스로 글자&글자배경색을 변경(reverse) 또는 원래대로(normal) 바꾸기			
+				$('h1').click(function(){
+				//$(this).switchClass('normal','reverse',1000);
+					if($(this).is('.normal')){
+						$(this).switchClass('normal','reverse',1000);
+					}else{
+						$(this).switchClass('reverse','normal',1000);
+					}
+				});	
+			});
+		</script>
+	</head>
+	<body>
+		<h1>제이쿼리 UI 플러그인</h1>
+		<h1>새해 복 많이 받으세요</h1>
+		<h1>임베디드 프로그램 시작</h1>
+	</body>
+</html>

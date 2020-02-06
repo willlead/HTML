@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		/* 2번 */
+		/* #area {
+			border: 1px solid black;
+			width: 250px;
+			height: 180px;			
+			overflow: hidden;
+		}  */
+
+		.reverse{
+			background-color: orange;
+			color: white;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			// 이미지 로테이션
+			// $("img").css("width", 250);
+			// //2초 마다 수행
+			// setInterval(function () {
+			// 	//1번
+			// 	//$("img").first().appendTo("body");
+			// 	//2번
+			// 	 $("img").first().appendTo("#area");				
+			// }, 2000);
+
+			// 3번 선택자 h1에 clone 복사
+			// $("div").append($("h1").clone());
+
+			//4번 on - 이벤트를 연결하는 매서드
+			//$(선택자)on("이벤트이름", 매서드)
+			$("h1").on("click", function(){
+				$(this).html(function(index, html){
+					return html+"★";
+				});
+			});
+
+			// 5번 mouseenter 마우스가 선택자에 들어오면
+			// $("h1").on("mouseenter", function(){
+			// 	$(this).addClass("reverse");
+			// });
+
+			// 6번
+			$("h1").on({				
+				mouseenter:function(){
+					$(this).addClass("reverse");
+				},
+				mouseleave:function(){
+					$(this).removeClass("reverse");					
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+	<!-- 1번 append -->
+	<!-- <img src="../images/Koala.jpg">
+	<img src="../images/Penguins.jpg">
+	<img src="../images/Lighthouse.jpg">
+	<img src="../images/Desert.jpg">
+	<img src="../images/Jellyfish.jpg"> -->
+
+	<!-- 2번 area 영역에  -->
+	<!-- <div id="area">
+		<img src="../images/Koala.jpg">
+		<img src="../images/Penguins.jpg">
+		<img src="../images/Lighthouse.jpg">
+		<img src="../images/Desert.jpg">
+		<img src="../images/Jellyfish.jpg">
+	</div> -->
+
+	<!-- 3번 -->
+	<!-- <h1>메리 크리스마스</h1>
+	<hr/><div></div><hr/> -->
+	
+	<!-- 4번 -->
+	<h1>김철수</h1>
+	<h1>홍길동</h1>
+	
+</body>
+
+</html>

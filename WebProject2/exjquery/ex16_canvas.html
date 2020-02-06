@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		#canvas {
+			border: 1px solid black;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			//getElement body안에 canvas id가 있는지?
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+			var position, x, y;
+			var sw = false;
+			$("#clear").click(function(){
+				canvas.width = canvas.width; //높이는 안해도 클리어됨				
+			});
+
+			$("#color").on("change", function(){
+				context.strokeStyle = $(this).val();
+			});
+
+			$(canvas).on({
+				mousedown: function (event) {
+					sw = true;
+					position = $(this).offset();
+					x = event.pageX - position.left;
+					y = event.pageY - position.top;
+					context.beginPath();
+					context.moveTo(x, y);
+				},
+				mousemove: function (event) {
+					if (sw) {
+						position = $(this).offset();
+						x = event.pageX - position.left;
+						y = event.pageY - position.top;
+						context.lineWidth = $("select>option:selected").val();
+						context.lineTo(x, y);
+						context.stroke();
+					}
+				},
+				mouseup: function (event) {
+					sw = false;
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<select>
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+	</select><br>
+	<input type="color" id="color">
+	<button id="clear">캔버스 지우기</button><br>
+	<canvas id="canvas" width="800" height="500"></canvas>
+</body>
+
+</html>

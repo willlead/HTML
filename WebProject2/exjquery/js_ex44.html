@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="Ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>제이쿼리 플러그인</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/favicon13.ico"/>
+		<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+		<!-- 플러그인사용하기1_1. css폴더에 jquery-ui.min.css 플러그인 추가 -->
+		
+		<script src="js/jquery-1.11.3.min.js"></script>	
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- 플러그인사용하기1_2. js폴더에 jquery-ui.min.js 플러그인 추가 -->
+
+<!-- 플러그인 ! -->
+		<style>
+			img{
+				width:150px; height:100px;
+				position: relative;
+			}
+		</style>
+
+		<script>	
+		
+		// ex_40 강의에서 참조.
+		// 용법4 **		$(선택자).show(speed, easing, callback);
+		// easing - 가속도. 떨어진 후 튕기는 형태를 연출. UI플러그인 강의때 배움 ---- 이걸 할 거임.
+		// 제이쿼리UI사이트 easing효과 바로가기 https://api.jqueryui.com/easings/
+		// easing 기본형은 linear(일정속도). 플러그인을 <select>로 선택적용되게 만들기
+		
+			$(document).ready(function() {
+				var e;
+				$('img').click(function(){
+					e = $('select>option:selected').val();  // 옵션선택 만들기
+					$(this).animate({
+						left:800
+					},3000,e,function(){ //3동안 1000을 이동, e 로 선택된옵션을 수행하면서..
+						$(this).delay(500).animate({
+							left:0
+						},1);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		
+		 <select>
+	        <option>linear</option>
+	        <option>swing</option>
+	        <option>easeInQuad</option>
+	        <option>easeOutQuad</option>
+	        <option>easeInOutQuad</option>
+	        <option>easeInCubic</option>
+	        <option>easeOutCubic</option>
+	        <option>easeInOutCubic</option>
+	        <option>easeInQuart</option>
+	        <option>easeOutQuart</option>
+	        <option>easeInOutQuart</option>
+	        <option>easeInQuint</option>
+	        <option>easeOutQuint</option>
+	        <option>easeInOutQuint</option>
+	        <option>easeInSine</option>
+	        <option>easeOutSine</option>
+	        <option>easeInOutSine</option>
+	        <option>easeInExpo</option>
+	        <option>easeOutExpo</option>
+	        <option>easeInOutExpo</option>
+	        <option>easeInCirc</option>
+	        <option>easeOutCirc</option>
+	        <option>easeInOutCirc</option>
+	        <option>easeInElastic</option>
+	        <option>easeOutElastic</option>
+	        <option>easeInOutElastic</option>
+	        <option>easeInBack</option>
+	        <option>easeOutBack</option>
+	        <option>easeInOutBack</option>
+	        <option>easeInBounce</option>
+	        <option>easeOutBounce</option>
+	        <option>easeInOutBounce</option>
+   </select><br/>
+    	<img src="images/car_purple.jpg"/>
+		
+	</body>
+</html>

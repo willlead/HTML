@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		img {			
+			position: relative;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$("img").each(function(index){
+				$(this).delay(index*1000).animate({
+					left:1500
+				},7000);
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<button>중지</button><br>
+	<img src="../images/car_purple.jpg"><br>
+	<img src="../images/car_red.jpg"><br>
+	<img src="../images/car_yellow.jpg"><br>
+	<img src="../images/car_green.jpg"><br>
+</body>
+
+</html>

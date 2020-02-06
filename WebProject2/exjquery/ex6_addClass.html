@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		/* .high-light {
+			background: yellow;
+		} */
+		.high-light-0 {
+			background: yellow;
+		}
+
+		.high-light-1 {
+			background: orange;
+		}
+
+		.high-light-2 {
+			background: blue;
+		}
+
+		.high-light-3 {
+			background: green;
+		}
+
+		.high-light-4 {
+			background: red;
+		}
+	</style>
+	<script>
+		// id를 추가한다.
+		// $(document).ready(function () {
+		// 	$("h1").addClass("high-light");			
+		// });
+
+		// 먀우스를 올릴떄, 땔떼 class 추가 제거
+		$(document).ready(function () {
+			// $("h1").hover(function () {
+			// 	$(this).addClass("high-light");
+
+			// },
+			// 	//마우스를 뗏을때
+			// 	function () {
+			// 		$(this).removeClass();
+			// 	});			
+
+			// //my 방법: 각각의 h1의 아이디 부여
+			// $("h1:nth-child(n)").addClass(function(index){
+			// 	return "high-light-"+index;
+			// });
+
+			//각각의 아이디 부여 방법
+			//방법1
+			// $("h1").each(function(index){
+			// 	$(this).addClass("high-light-"+index);
+			// });
+
+			$("#amount").click(function () {
+				//var age = prompt("당신의 나이는?", "0");
+				//abc(age);
+				
+				var ret = abc(33);
+				alert("결과"+ ret);
+			});
+		});
+
+		function abc(age) {
+			//alert("안녕 나는 " + age + "살이양");
+			var ret;
+			ret = age*3;
+
+			//return 을 만나면 호출한 곳으로 돌아간다.
+			return ret;
+		};
+
+	</script>
+</head>
+
+<body>
+	<h1 id="amount">
+		나이는?
+	</h1>
+	<h1 id="result">
+		결과???
+	</h1>
+	<h1>
+		하이브리드앱
+	</h1>
+	<h1>
+		아두이노
+	</h1>
+	<h1>
+		임베디드 프로그래밍
+	</h1>
+</body>
+
+</html>

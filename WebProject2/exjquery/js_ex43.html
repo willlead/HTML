@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="Ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>제이쿼리 플러그인</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/favicon13.ico"/>
+		<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+		<!-- 플러그인사용하기1_1. css폴더에 jquery-ui.min.css 플러그인 추가 -->
+		
+		<script src="js/jquery-1.11.3.min.js"></script>	
+		<script src="js/jquery-ui.min.js"></script>
+		<!-- 플러그인사용하기1_2. js폴더에 jquery-ui.min.js 플러그인 추가 -->
+		
+		<!-- 플러그인사용하기1_3. 따로 사용할 images폴더를 만들어 css폴더안에 통째로 붙여넣기 -->
+		
+		
+<!-- 플러그인 ! -->
+
+<!-- 제이쿼리UI 공식 홈페이지. 플러그인 다운로드 받는 경로 
+	 https://jqueryui.com/     -->
+		<style>
+			img{
+				position: relative;
+			}
+		</style>
+	
+		<script>							
+// 자동차 이미지를 선택 후 드래그해서 원하는 위치에 갖다놓기
+			$(document).ready(function() {
+/*
+				// 플러그인 없이 코드로 만들기
+				
+				var sw=false; 		 // 실행동작을 boolean으로 조정할 것임
+				var posLeft, posTop; // 이동시킨 위치값을 담을 변수
+				$('img').on({
+					mousedown:function(event) {
+						sw=true;
+						posLeft=event.offsetX;
+						posTop=event.offsetY;
+						event.preventDefault(); // 기본이벤트 제거처리.
+					},
+					mousemove:function(event) {
+						if(sw==true){
+							var x=event.clientX-posLeft;
+							var y=event.clientY-posTop;
+							$(this).css({
+								left:x,
+								top:y
+							});
+							event.preventDefault(); // 기본이벤트 제거처리.
+						}
+					},
+					mouseup:function(event) {
+						sw=false;
+						event.preventDefault(); // 기본이벤트 제거처리.
+					}
+				});*/
+				
+				// 플러그인사용하기 2.
+								
+				$('img').draggable(); // jquery-ui.min.js 플러그인에서 제공되는 메소드
+				$('h1').draggable();  
+				
+				// 태그별로 마우스로 위치 조절해서 놓을 수 있음.
+			});
+		</script>
+	</head>
+	<body>
+		<img src="images/car_yellow.jpg"/>
+		<h1>새해 복 많이 받으세요</h1>
+	</body>
+</html>

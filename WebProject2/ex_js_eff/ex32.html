@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang="ko">
+   <head>
+      <meta charset="utf-8" />
+      <title>웹앱</title>
+      <meta name="description" content="" />
+      <meta name="author" content="ezen" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="../js/jquery-1.11.3.min.js"></script>
+      
+      <script>
+         $(document).ready(function(){
+            $('img').on({
+               mousedown:function (event) {
+                  sw = true;
+                  posLeft = event.ofsetX;
+                  posTop = event.offsetY;
+                  event.preventDefault();
+               },
+               mousemove:function (event) {
+                  if(sw==true){
+                     var x = event.clientX-posLeft,
+                     var y = event.clientY-posTop;
+                     $(this).css({
+                        left:x,
+                        top:y
+                     });
+                  }
+               },
+               mouseup:function (event) {
+                  sw = false;
+                  event.preventDefault();
+               }
+            });
+         });
+      </script>
+   </head>
+   <body>
+      <img src="images/car_yellow.jpg"/>
+   </body>
+</html>

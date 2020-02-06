@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+
+	</style>
+	<script>
+		$(document).ready(function () {
+			// $("img").attr("width", function(index){
+			// 	return 100 * (index + 1);
+			// })
+
+			// attr({})
+			// $("img").attr({
+			// 	width:function(index){
+			// 		return (index+1)*100
+			// 	},
+			// 	height:100
+			// });
+
+			// 상자 열였다 닫혔다.
+			// $("img").hover(function(){
+			// 	$(this).attr("src","../images/box2.png");
+			// }, function(){
+			// 	$(this).attr("src","../images/box1.png");
+			// })
+
+			//3가지 그림에 대해서 각각 hover 다르게 
+			// var newImg = ["box2", "웃는사람", "lightbulb"];
+			// var oldImg = ["box1", "우는사람", "lightbulb1"];
+			// var index;
+			// $("img").hover(function(){
+			// 	index = $(this).index();
+			// 	$(this).attr("src","../images/"+newImg[index]+".png");
+			// }, function(){
+			// 	$(this).attr("src","../images/"+oldImg[index]+".png");
+			// })
+
+			// get: 속성 이름만 쓰면, set: 속성 이름과 값이 들어가면
+			// var newImg = ["box2", "웃는사람", "lightbulb"];
+			// var oldImg;
+			// var index;
+			// $("img").hover(function(){
+			// 	index = $(this).index();
+			// 	//get
+			// 	oldImg = $(this).attr("src");				
+			// 	// set
+			// 	$(this).attr("src","../images/"+newImg[index]+".png");
+			// }, function(){
+			// 	//set
+			// 	$(this).attr("src",oldImg);
+			// })
+
+			//remove attr
+			$("button").click(function(){
+				$("img").removeAttr("src");
+			});			
+
+		});
+	</script>
+</head>
+
+<body>
+	<!-- <img src="../images/Koala.jpg">
+	<img src="../images/Penguins.jpg">
+	<img src="../images/Lighthouse.jpg"> -->
+
+	<!-- <img src="../images/box1.png">
+	<img src="../images/우는사람.png">
+	<img src="../images/lightbulb1.png"> -->
+
+	<button>장바구니 비우기</button>
+	<div>
+		<img src="../images/box1.png">
+		<img src="../images/우는사람.png">
+		<img src="../images/lightbulb1.png">
+	</div>
+
+
+</body>
+
+</html>

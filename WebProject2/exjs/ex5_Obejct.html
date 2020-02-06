@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="윤성렬" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
+		<script src="../js/jquery.mobile-1.4.5.min.js"></script>			
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script>
+			/* 	js에서는 
+				[]: 배열 
+					var num = [10, 20, 30];
+				{}: 객체
+					var objectEx = {
+						속성:값,
+						속성:값,
+						속성:값,
+						속성:값
+					}
+			
+			//객체
+			var product = {
+				제품명:"망고통조림",
+				가격:5000,
+				원산지:"필리핀",
+				성분:"망고, 설탕, 황색소"
+			};
+			document.write(product.원산지)
+								
+			//객체 배열
+			var product2 = [{name:"하잇1", age:11}, {name:"하잇2", age:10}, {name:"하잇3", age:9}];			
+			
+			*/
+			
+			var student = {
+				name:"윤성렬",
+				kor:90, math:92,
+				eng:75, art:100,
+				total:function(){
+					return this.kor+this.math+this.eng+this.art;
+				},
+				avg:function(){
+					return this.total()/4;
+				}				
+			};
+			/*
+			//방법 1
+			var output = "";
+			output +=student.name+"<br/>";
+			output+= "============<br/>";
+			output+="국어:"+student.kor+"<br/>";
+			output+="영어:"+student.eng+"<br/>";
+			output+="수학:"+student.math+"<br/>";
+			output+="과학:"+student.arg+"<br/>";
+			output+="총점:"+student.total()+"<br/>";
+			output+="평균:"+student.avg()+"<br/>";
+			*/
+			
+			/**/
+			//방법 2			
+			with(student){
+				var output = "";
+			output +=name+"<br/>";
+			output+= "============<br/>";
+			output+="국어:"+kor+"<br/>";
+			output+="영어:"+eng+"<br/>";
+			output+="수학:"+math+"<br/>";
+			output+="과학:"+art+"<br/>";
+			output+="총점:"+total()+"<br/>";
+			output+="평균:"+avg()+"<br/>";
+			}			
+			document.write(output);
+	
+			
+		</script> 
+	</head>
+	<body>		
+				
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="윤성렬" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />				
+		<script src="../js/jquery-1.11.3.min.js"></script>		
+		<style>
+			
+		</style>	
+		<script>
+			$(document).ready(function(){
+				//자식 선택자 => 부모> 자식
+				//$("#abc>h1").css("color","blue");
+				
+				//후손  선택자 => 부모 자식(자식, 손자, 증손자까지 모든 )
+				$("#abc h1").css("color","blue");
+			})
+			
+		</script>
+	</head>	
+	<body>		
+		<h1>자바쿼리 시작</h1>
+		<p >자바스크립트 라이브러리</p>
+		<h1 >동물원 소개</h1>
+		<ul>
+			<li>호랑이</li>
+			<li >기린</li>
+			<li>코끼리</li>
+		</ul>
+		<div id="abc">
+			<h1>나는 다른 영역</h1>
+			<ol>
+				<li>자바스크립트</li>
+				<li>제이쿼리</li>
+				<li>하이브리드 앱</li>
+			</ol>
+			<div>
+				<h1>오늘은 목요일</h1>
+			</div>
+		</div>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

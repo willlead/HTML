@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		
+	</style>
+	<script>
+		//$를 jquery 식별자로 사용하지 않겠다고 정의		
+		$.noConflict();
+
+		//JQuery를 치환
+		var J = JQuery;		
+		// $ 대신 이제 JQuery를 입력 
+		JQuery(document).ready(function () {
+			//JQuery를 치환한 J를 사용
+			J("h1").css("color", "red");			
+		});  
+	</script>
+</head>
+
+<body>
+	<h1>
+		오늘의 날씨는?
+	</h1>
+	<h1>
+		무슨 요일?
+	</h1>
+	<h1>
+		다음주 수요일?
+	</h1>
+</body>
+
+</html>

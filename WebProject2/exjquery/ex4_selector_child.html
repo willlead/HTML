@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="윤성렬" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />				
+		<script src="../js/jquery-1.11.3.min.js"></script>		
+		<style>
+			
+		</style>	
+		<script>
+			$(document).ready(function(){
+				setTimeout(function(){
+					//selected는 선택 한 값을 value에 대입한다.
+					// val()은 get
+					// val("값")	 set
+					var value = $("select>option:selected").val();
+				}, 5000);
+			})
+		</script>
+	</head>	
+	<body>		
+		<h2>메뉴를 5초안에 고르시오</h2>
+		<select>
+			<option>김치찌개</option>
+			<option>된장찌개</option>
+			<option>칼국수</option>
+			<option>순대국</option>
+			<option>생선구이</option>
+		</select>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

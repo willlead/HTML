@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>	
+		#area>h1{
+			cursor: pointer;
+		}
+	</style>
+	<script>	
+		$(document).ready(function () {			
+			var amount = [3, 2, 5];
+			var i;
+
+			$("#area>h1").click(function () {
+				i = $(this).index();
+				amount[i]--;
+				alert("구입해주셔서 감사합니다. (남은수량: " + amount[i] + "대)");				
+				if (amount[i] == 0) {					
+					alert("매진되었습니다.!!");
+					// off는 이벤트 연결을 해제시킨다.
+					$(this).off();
+					$(this).css({
+						cursor: "defalut",
+						color: "gray"
+					});
+					$(this).html($(this).html()+" 매진!!!");
+				}				
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1>특별 세일 항목</h1>
+	<div id="area">
+		<h1>냉장고</h1>
+		<h1>세탁기</h1>
+		<h1>청소기</h1>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="윤성렬" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="../js/jquery-1.11.3.min.js"></script>
+
+		<script>
+			// 자식 윈도우 만들기는 '','' 쌍따옴표는 안됨..
+			var child = window.open("", "", "width=300, height=200");
+			child.document.write("<h1>다음 주 수요일은 쉽니다.</h1>");
+			var w = screen.width;
+			var h = screen.height;
+			child.moveTo(0, 0);
+			child.resizeTo(w, h);
+			setInterval(function() {
+				child.resizeBy(-20, -20);
+				child.moveBy(10, 10);
+			}, 1000);
+
+		</script>
+	</head>
+	<body>
+		<h1>자바스크립트: ??</h1>
+	</body>
+</html>

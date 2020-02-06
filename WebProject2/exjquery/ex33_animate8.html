@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+
+			$("img").click(function () {
+				// var w = $(this).css("width");
+				// var h = $(this).css("height");
+				// // alert(w);
+				// $(this).animate({
+				// 	width: parseInt(w) + 50,
+				// 	height: parseInt(h) + 50
+				// }, 1000);
+
+				$(this).animate({
+					width:  "+=50",
+					height: "+=50"
+				}, 1000);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<img src="../images/car_purple.jpg">
+</body>
+
+</html>

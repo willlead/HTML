@@ -1,0 +1,46 @@
+div#contetns{
+	padding:5px;
+}
+nav#sub_menu{
+	padding:5px;
+	width:200px;
+	float:left;
+}
+
+nav#sub_menu div#sub_title{
+	background-color:#00008B;
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+	color:white;
+	padding: 5px;
+}
+nav#sub_menu div#sub_item ul{
+	list-style-type: none;
+	padding:0;
+}
+nav#sub_menu div#sub_item ul li{
+	font-size:18px;
+	font-weight:bold;
+}
+nav#sub_menu div#sub_item ul li a{
+	display: block;
+	width:100%;
+	text-decoration:none;
+	color:black;
+	padding : 10px;
+}
+nav#sub_menu div#sub_item ul li a:hover{
+	color:white;
+	background-color: #008B8B;
+}
+
+section{
+	padding:5px 5px 50px 5px;
+	width:985px;
+	float:right;
+}
+section div#navigation{
+	text-align:right;
+	padding:0 10px;
+}

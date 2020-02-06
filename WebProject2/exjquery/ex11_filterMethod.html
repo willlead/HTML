@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		
+	</style>
+	<script>
+		$(document).ready(function () {
+			// 한줄 filter
+			// $("h1:even").css({
+			// 	backgroundColor:"yellow",
+			// 	color:"red"
+			// });
+
+			// filter 매서드 활용
+			// $("h1")
+			// 	.filter(":even")
+			// 	.css({ backgroundColor:"yellow", color:"red" });
+
+			// 매서드를 활용한 filter
+			// $("h1")
+			// 	.filter(function (index) { return index % 3 == 0; })
+			// 	.css({ backgroundColor: "yellow", color: "red" });
+
+			//금요일 복습
+			// $("h1").css("background", "orange");
+			// $("h1:even").css("color", "white");
+			// $("h1:odd").css("color", "red");
+
+			// 골라진 짝수에서 다시 새롭게 0,1,2~ 인덱스 시작하기에 홀수번째만
+			//end(): 문서 객체 선택을 한단계 뒤로 돌리는 메서드
+			// $("h1")
+			// .css("background", "orange")
+			// .filter(":even").css("color", "white").end() 
+			// .filter(":odd").css("color", "red");    
+
+			// first, last, eq
+			// $("h1").eq(0).css("background", "orange");
+			// $("h1").last().css("background", "orange");
+			// $("h1").first().css("background", "orange");
+		
+			$("h1").css("background", "orange").add("p").css("color", "red");
+		
+
+		});
+	</script>
+</head>
+
+<body>
+	<h1>자바스크릅트</h1>	
+	<h1>제이쿼리</h1>
+	<h1>하이브리드앱</h1>
+	<h1>자바스크릅트</h1>	
+	<p>정적인 홈페이지를 동적으로 만들어주는 프로그램</p>
+
+	<h1>제이쿼리</h1>
+	<p>자바스크립트를 쉽게군현해주는 라이브러리</p>
+
+	<h1>하이브리드앱</h1>
+	<p>html, css, javascript를 가지고 만드는 앱</p>
+
+	
+</body>
+
+</html>

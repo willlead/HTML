@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		/* .high-light {
+			background: yellow;
+		} */
+		.high-light-0 {
+			background: yellow;
+		}
+
+		.high-light-1 {
+			background: orange;
+		}
+
+		.high-light-2 {
+			background: blue;
+		}
+
+		.high-light-3 {
+			background: green;
+		}
+
+		.high-light-4 {
+			background: red;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			//index는 부모로 받은 번호이다.
+			$("h1").addClass(function (index) {
+				return "high-light-" + index;
+			});
+			
+		});
+	</script>
+</head>
+
+<body>
+	<h1>
+		자바스크립트
+	</h1>
+	<h1>
+		제이쿼리
+	</h1>
+	<h1>
+		하이브리드앱
+	</h1>
+	<h1>
+		아두이노
+	</h1>
+	<h1>
+		임베디드 프로그래밍
+	</h1>
+</body>
+
+</html>

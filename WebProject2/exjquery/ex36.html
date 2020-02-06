@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/jquery.innerfade.js"></script>
+	
+	<style>
+		img {			
+			width: 500px;
+			position: absolute;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			// setInterval(function(){
+			// 	$("img").last().fadeOut(2000, function(){
+			// 		$(this).prependTo("#area").fadeIn();
+			// 	});
+			// },2000);
+			$("#area").innerfade();
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="area">
+	<img src="../images/Koala.jpg">
+	<img src="../images/Penguins.jpg">
+	<img src="../images/Desert.jpg">
+	<img src="../images/lightbulb.png">
+	<img src="../images/Jellyfish.jpg">
+</div>
+</body>
+
+</html>

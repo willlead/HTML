@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="윤성렬" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="../js/jquery-1.11.3.min.js"></script>
+
+		<script>
+			var site =["www.kbs.co.kr", "www.sbs.co.kr","www.imbc.coom"];			
+			var index = 0;		
+			var s = setInterval(function() {			
+				if(index>2)
+					index = 0;				
+				//3초마다
+				window.open("http://"+site[index], "child", 'width=600, height=300');
+				index++;
+				
+			}, 3000);
+			
+			function poptop(){
+				clearInterval(s);
+			}
+		
+			/*
+			setTimeout(function() {
+				//3초뒤 팝업창 오픈
+				window.open("http://www.kbs.co.kr", "child", 'width=600, height=300');
+			}, 3000);
+			*/
+
+		</script>
+	</head>
+	<body>
+		<h1>자바스크립트: ??</h1>
+		<p> 단락 </p>
+		<button onclick="poptop();">광고 안보기</button>
+	</body>
+</html>

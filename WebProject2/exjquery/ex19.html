@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+		*{
+			margin: 5px;
+			padding: 5px;
+			border: 3px solid black;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {		
+			$("a").click(function(event){
+				$(this).css("background","blue");
+
+				//기본 이벤트를 제거
+				// 클릭 이벤트가 제거됨
+				//event.preventDefault();
+
+				//이벤트 전달을 막는다.
+				//부모에게 까지 이벤트 전달하는것을 막는다.
+				event.stopPropagation();
+
+				// 위 preventDefault, stopPropagation 둘다 막는다면 return false하면 끝.
+				//return false;
+			});
+			$("h1").click(function(){
+				$(this).css("background","red");
+			})
+		});
+
+
+	</script>
+</head>
+
+<body>
+	<h1>
+		<a href="http://www.kbs.co.kr" target="_blank">한국방송</a>
+	</h1>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="윤성렬" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="../js/jquery-1.11.3.min.js"></script>
+		<script>
+			window.onload = function() {
+				/**/
+				 //내용 추가
+				 var h = document.createElement("p");
+				 var t = document.createTextNode("저의 홈페이지를 방문해 주셔서 감사합니다.");
+				 h.appendChild(t);
+				 document.body.appendChild(h);
+
+				 var image = document.createElement("img");
+				 var date = new Date();
+				 var month =date.getMonth();
+				 if( 4 < month && month < 10 ){
+				 	image.src = "../images/Koala.jpg";
+				 }else {
+				 	image.src = "../images/Penguins.jpg";
+				 }
+
+				 image.width = 500;
+				 image.height = 300;
+				 document.body.appendChild(image);
+				 /*
+				 //내용 변경
+				 var h = document.getElementById("abc");
+				 h.innerHTML = "오늘은 수요일";
+				 */
+				//j쿼리 dom 조작
+				//$("abc").html("오늘은 수요일");
+				//var t = document.createTextNode("오늘은 수요일");
+
+			}
+		</script>
+	</head>
+	<body>
+		<h1>자바스크립트</h1>
+		<!--h1 id="abc">여기가 바뀝니다.</h1-->
+	</body>
+</html>

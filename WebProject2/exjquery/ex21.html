@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+
+	</style>
+	<script>
+		$(document).ready(function () {
+			//keydown, keypress, keyup
+			$("textarea").keyup(function(){
+				var inputLength = $(this).val().length;
+				var remain = 80 - inputLength;
+				if(remain>0){
+					$("h1").html(remain).css("color","black");
+				} else{
+					$("h1").html("MMS").css("color","red");
+				}
+								
+				
+			});			
+		});
+	</script>
+</head>
+
+<body>
+	<div>
+		<p>메모</p>
+		<h1>80</h1>
+		<textarea cols="70" rows="5"></textarea>
+	</div>
+</body>
+
+</html>

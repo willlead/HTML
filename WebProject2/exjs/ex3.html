@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="윤성렬" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />		
+		<script src="../js/jquery-1.11.3.min.js"></script>		
+		
+		<script>
+			/*
+			1. 스크립트 내에서는 // 주석을 사용할 수 있다.
+			2. "", '' 둘다 사용가능하다.
+			3. 메서드는 함수라도 불린다.
+			4. prompt: 자바스크립내 내에서 제공하는 메서드, 내장 메서드
+			4.1 "0"은 디폴틑 값.*/
+			
+			/*
+			var age = prompt("당신의 나이는?","0");
+			if(age >= 20) {
+				document.write("당신은 성인입니다.");
+			} else {
+				document.write("당신은 미성년자입니다.");
+			}*/
+			
+			/*
+			var a = 30;
+			var b= 20;
+			var result  = a>b?a:b;
+			document.write("두수 중 큰수는: "+ result);*/
+			
+			/*
+			//1번 문제
+			var price1 = 4000;
+			var price2 = 6000;
+			var price3 = 3000;
+			var total = price1+price2+price3;
+			var limit = 10000;
+			var result =  total> limit? (total-limit)+"원 초과": "돈관리 잘했어요!";			
+			document.write(result);*/
+			
+			/*
+			//2번 문제
+			var avg = (1200+1200+1300)/3;
+			var val4 = prompt("4분기 판매량은? ","0");			
+			var result = val4>=avg ? "평균이상" : "평균 미만";
+			document.write(result);
+			*/
+			
+			/*
+			//var pan = prompt("판매수량은?","0");
+			//document.write(pan*2000);
+			
+			//Number는 문자를 숫자화 시킨다.
+			//ex1)
+			var pan = Number(prompt("판매수량은?","0"));
+			document.write(pan+500);			
+			//ex2)	
+			var pan2 = prompt("판매수량은?", "0");
+			document.write(Number(pan2)+500);
+			*//**//**/
+			//parseInt
+			//300개 parseInt("300개") => 300 으로 변경,
+			//parseInt("2.5"") => 2 로 변경
+			var pan3 = prompt("판매수량은?", "0");
+			var result = parseInt(pan3)+500;			
+			result+= ", value: " + pan3;			
+			document.write(result);			
+						
+		</script>
+	</head>
+	<body>						
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

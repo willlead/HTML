@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+
+	</style>
+	<script>
+		$(document).ready(function () {
+			// : filter				
+			// odd: 홀수
+			// even: 짝수
+			// first: 첫번째만
+			// last: 마지막만
+			// eq(0) : 첫번째
+			// eq(1) : 두번째
+			// eq(-1): 마지막 선택 하지만 last 사용 권장
+			// eq(-2): 마지막 전번째 선택 
+			// lt(2): less then 2 2보다 작은경우 0,1만 선택
+			// gt(2): great then 2 보다 큰 경우 3 ~
+			// nth-child(2n) : 등차수열, 내 맘대로 공식 지정해서 사용가능
+			$("h1:odd").css("background", "orange");
+
+			// $("tr:odd").css("background", "#B7F0B1");
+			// $("tr:even").css("background", "#FFC19E");
+
+			// //$("tr:first").css("background", "black").css("color","white");
+			// $("'r:first").css({
+			// 	background:"black",
+			// 	color:"white"
+			// });
+
+			$("tr:eq(0)").css("background", "#000000").css("color", "#ffffff");			
+		 	$('td:nth-child(3n+1)').css("background", "#B7F0B1");
+			$('td:nth-child(3n+2)').css("background", "#FFC19E");
+			$('td:nth-child(3n)').css("background", "#B2EBF4");			
+		});
+	</script>
+</head>
+
+<body>
+	<h1>월요일</h1>
+	<h1>화요일</h1>
+	<h1>수요일</h1>
+	<h1>목요일</h1>
+	<h1>금요일</h1>
+	<h1>토요일</h1>
+	<h1>일요일</h1>
+
+	<table>
+		<tr>
+			<th>이름</th>
+			<th>혈액형</th>
+			<th>지역</th>
+		</tr>
+		<tr>
+			<td>김철수</td>
+			<td>O형</td>
+			<td>서울시 송파구</td>
+		</tr>
+		<tr>
+			<td>이영희</td>
+			<td>AB형</td>
+			<td>성남시 분당구</td>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>A형</td>
+			<td>용인시 시흥구</td>
+		</tr>
+		<tr>
+			<td>손흥민</td>
+			<td>B형</td>
+			<td>영국 런던</td>
+		</tr>
+		<tr>
+			<td>류현진</td>
+			<td>AB형</td>
+			<td>미국 로스엔젤레스</td>
+		</tr>
+	</table>
+</body>
+
+</html>

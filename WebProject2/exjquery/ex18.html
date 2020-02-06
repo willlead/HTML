@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>웹앱</title>
+	<meta name="description" content="" />
+	<meta name="author" content="윤성렬" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<style>
+
+	</style>
+	<script>
+		$(document).ready(function () {
+			// 	$("h1").one("click", function () {
+			// 		alert($(this).html() + "님 안녕하세요");
+			// 	})
+			// });		
+
+			$("h1").click(function () {
+				$(this).html(function (index, html) {
+					return html + "★";
+				});
+			});
+
+			// 강제적으로 이벤트 발생 
+			// $("선택자").trigger("이벤트이름")
+			setInterval(function () {
+				$("h1").last().trigger("click");
+			}, 3000);
+		});
+
+
+	</script>
+</head>
+
+<body>
+	<h1>김철수</h1>
+	<h1>이영희</h1>
+	<h1>홍길동</h1>
+</body>
+
+</html>

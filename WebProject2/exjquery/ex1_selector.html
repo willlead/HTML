@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>웹앱</title>
+		<meta name="description" content="" />
+		<meta name="author" content="윤성렬" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />				
+		<script src="../js/jquery-1.11.3.min.js"></script>		
+		<style>
+			
+		</style>	
+		<script>
+			// $는 제이쿼리 식별자
+			// 선택자는 ""를 해야하며, 안하면 변수로 본다.
+			// $(선택자).매서드();			
+			// $(선택자).css("속성이름", "값");
+			//documnet.ready: 화면이 준비되면 실행해라.
+			$(document).ready(function(){
+				//선택자 활용법
+				//$("h1,p") 또는 $("*")
+				//$("h1,p").css("color","red");
+				
+				//#은 id 선택	
+				$("#animal").css("color","green");
+				
+				//. 은 class 선택
+				// class는 중복이 가능하다.
+				$(".target").css("color","red");
+				$(".item").css("background","yellow");
+			});
+		</script>
+	</head>	
+	<body>		
+		<h1>자바쿼리 시작</h1>
+		<p class="target item">자바스크립트 라이브러리</p>
+		<h1 id="animal">동물원 소개</h1>
+		<ul>
+			<li>호랑이</li>
+			<li class="target">기린</li>
+			<li>코끼리</li>
+		</ul>
+				
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
