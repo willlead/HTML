@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            border: 1px solid red;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color: #000;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+        a:after{
+            content: "▼";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 10%;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        #nav{
+            display: flex;
+            height: 50px;
+        }
+        .menu{
+            flex: 1;
+            background-color: #ff0;
+            line-height: 50px;
+        }
+        .menu:hover{
+            background-color: #ccc;
+        }
+        .menu li{
+            width: 100%;
+            background-color: #ff0;
+/*            
+            line-height는 기준이 중앙에서 위로 25px, 아래로 25px
+*/
+            line-height: 50px;
+        }
+        .menu li:hover{
+            background-color: #ccc;
+        }
+    </style>
+<!--    jquery.com >> download >> compressed 복사-->
+    <script src="jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div id="nav">
+<!--       .menu*2-->
+        <div class="menu">
+            <a href="#">company</a>
+<!--            ul>li{sub$}*3-->
+       <ul>
+           <li>sub1</li>
+           <li>sub2</li>
+           <li>sub3</li>
+       </ul>
+        </div>
+        <div class="menu">
+        <a href="#">product</a>
+<!--            ul>li{sub$}*3-->
+       <ul>
+           <li>sub1</li>
+           <li>sub2</li>
+           <li>sub3</li>
+       </ul>
+        </div>        
+    </div>
+    
+    <script>
+        //children(자식 찾기), find(후손 찾기), filter
+        $(".menu ul").hide();
+//        $(".menu").hover(function(){
+//            //자식이 0.5초 만에 내려온다.
+//            $(this).children("ul").slideDown(500);
+//        },function(){
+//            $(this).children("ul").slideUp();
+//        });
+        $("menu").click(function(){              $(this).children("ul").slideToggle().parent().siblings().children("ul").hide();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

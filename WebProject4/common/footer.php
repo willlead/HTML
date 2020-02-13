@@ -1,4 +1,4 @@
-header("Content-Type: text/html; charset=utf-8");
+
 <div id="short_cut">
     <p><a href="index.php">HOME</a>
         | <a href="#">개인정보취급방침</a>

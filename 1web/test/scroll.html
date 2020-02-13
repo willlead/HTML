@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100vw;
+            height: 100vh;
+            background-color: #f00;
+        }
+        .box:nth-child(even){
+            background-color: #ff0;
+        }
+        .box:nth-child(2){
+            background-image: url(../images/11.jpg);
+            background-repeat: no-repeat;
+/*            패럴렉스*/
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+    </style>
+    <script src = "jquery-3.4.1.js"></script>
+</head>
+<body>   
+    <div class="section">
+       <div class="box">1</div>
+       <div class="box">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repellat eos itaque commodi necessitatibus, reiciendis temporibus ducimus id nobis molestias velit voluptatem dolores beatae pariatur vero perspiciatis tempora, magnam repudiandae.</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repellat eos itaque commodi necessitatibus, reiciendis temporibus ducimus id nobis molestias velit voluptatem dolores beatae pariatur vero perspiciatis tempora, magnam repudiandae.</p>
+           
+       </div>
+       <div class="box">2</div>
+       <div class="box">3</div>
+       <div class="box">4</div>
+       <div class="box">5</div>
+    </div>
+    <script>
+//        $(window).on("mousewheel", function(e){
+//           var E = e.orginalEvent; 
+//            console.log(E);
+//            document.write(E.wheelDe);
+//        });
+        
+        //페이지 단위로 스크롤 꼭 암기
+        $(".box").on("mousewheel",function(e){
+            var E = e.originalEvent;
+            var delta = E.wheelDelta;
+            if(delta < 0){
+                moveTop = $(this).next().offset().top;
+            }else {
+                moveTop = $(this).prev().offset().top;
+            }
+            $("html, body").stop().animate({scrollTop:moveTop+"px"}, 500);
+        });
+    </script>
+</body>
+</html>

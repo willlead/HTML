@@ -1,5 +1,3 @@
-
-
 div#main_pic{
 	padding:5px;
 }
@@ -41,5 +39,7 @@ article{
 #title div {
 	display: inline-block;
 }
-
+.top>img{
+    width: 100%;
+}
 

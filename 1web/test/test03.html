@@ -1,0 +1,89 @@
+<!-- ! tab -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+/*       display:flex;  : 부모에서 지정해준다.
+        자식 요소는
+        flex: 
+        */
+        .main{
+/*            인라인 처럼 옆으로 붙는다.*/
+            display: flex;
+        }
+        .a1{
+            border: 1px solid red;
+            background-color: #ff0;
+            flex: 1;
+            text-align: center;
+            padding: 2%;
+        }
+        .a1>img{
+            width: 100%;
+        }
+        .a1>p{            
+            text-align: left
+        }
+/*
+        .a1:nth-child(1){
+            background-color: #ff0;
+            flex: 1;
+        }
+        .a1:nth-child(2){
+            background-color: #0ff;
+            flex: 1;
+        }
+        .a1:nth-child(3){
+            background-color: #0f0;
+            flex: 1;
+        }
+*/
+    </style>
+</head>
+<body>
+
+    <div class="main">
+       
+        <div class="a1">
+            <img src="../images/1.jpg" alt="">
+            <h2>롯데타워</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cumque, hic aliquid nobis aperiam facere eum optio dignissimos unde in quisquam excepturi ab impedit ullam voluptatibus. Maxime quas, enim ratione!</p>
+        </div>
+        <div class="a1">
+           <img src="../images/2.jpg" alt="">
+            <h2>롯데타워</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam non a, qui vitae alias recusandae veniam autem, rem veritatis eos harum animi sit cupiditate ea quas? Veritatis asperiores natus suscipit.</p>
+        </div>
+        <div class="a1">
+           <img src="../images/1.jpg" alt="">
+            <h2>롯데타워</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cumque, hic aliquid nobis aperiam facere eum optio dignissimos unde in quisquam excepturi ab impedit ullam voluptatibus. Maxime quas, enim ratione!</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>마이 레시피-게시판</title>
+	<title>My Recipe - board</title>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="css/main.css">	
 	<link rel="stylesheet" type="text/css" href="css/index.css">	
@@ -97,7 +97,8 @@
 include "common/dbconn.php";
 
 //sql문 작성
-$sql = "SELECT serial, subject, author, end_date, view_cnt FROM notify ORDER BY serial DESC";
+// $sql = "SELECT serial, subject, author, ent_date, view_cnt FROM notify ORDER BY serial DESC";
+$sql = "select serial, subject, content, author,ent_date, view_cnt FROM notify ORDER BY serial DESC";
 
 //쿼리 전송 및 결과 받기
 $result = $conn->query($sql);
@@ -130,12 +131,12 @@ if ($result->num_rows > 0) {
 		echo "<tr>";
 		echo "<td>". $row['serial'] ."</td>";
 		echo "<td class='board_subject'>";
-		echo "<a href='m03_06_board_contents.php?serial=". $row['serial'] ."'>";
+		echo "<a href='m03_04_board_contents.php?serial=". $row['serial'] ."'>";
 		echo $row['subject'];
 		echo "</a>";
 		echo "</td>";
 		echo "<td>". $row['author'] ."</td>";
-		echo "<td>". $row['end_date'] ."</td>";
+		echo "<td>". $row['ent_date'] ."</td>";
 		echo "<td>". $row['view_cnt'] ."</td>";
 		echo "</tr>";
 		
@@ -161,7 +162,7 @@ $conn->close();
 			<div id="board_bottom">
 				<p>이전 | 1 | 2 | 3 | 4 | 5 | 다음</p>
 				<p id="buttons">
-					<a href="#"><button onclick="">글쓰기</button></a>
+					<a href="m03_02_board_write.php"><button onclick="">글쓰기</button></a>
 				</p>
 			</div>
 		</section>

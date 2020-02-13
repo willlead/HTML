@@ -16,6 +16,7 @@
 			/* width: auto; */
 			display: inline-block;
 			border: 1px dotted gray;
+			/* background: orange; */
 		}
 
 		#recipe_pic {
@@ -55,10 +56,9 @@
 	</style>
 	<script>
 		$(document).ready(function(){
-			var index;
+			var $index;
 			$("#board_rank a").click(function(){
-				index = $(this).index();
-				
+				$index = $(this).index();				
 			});
 		});
 	</script>
@@ -68,7 +68,7 @@
 	<header>
 	<?php include 'common/header.php';?>
 	</header>
-	<div id="contetns">
+	<div id="contetns">9
 	<?php
 //DB Connection
 include "common/dbconn.php";
@@ -81,27 +81,29 @@ $result = $conn->query($sql);
 ?>
 		<div id="recipe">
 			<h1 id="contents_title">핫 레시피</h1>			
-			<table>
-				<caption><h3>핫</caption>							
-					<tr>
-					<td class='course'>제목</td>
-					<td><a href='#'>내용</a></td>
-					<td>
-					<div id='time'>
-							<img src='images/recipe_time.png'>
-							<p>20분</p>
-							
-						</div>
-						<div id='like'>
-							<img src='images/recipe_like.png'>
-							<p>802명</p>
-							
-						</div>
-						</div>
-					</td>
-					</tr>
-				}
-			</table>
+			<ul>
+			<?php		
+				while($row = $result->fetch_assoc()) {					
+					echo "<li>";
+					echo "<img id='recipe_pic' src='images/recipe_1.png'>";
+					echo "<h1 id='recipe_title'>".$row['subject']."</h1>";
+					echo "<h2 id='recipe_des'>".$row['content']."</h2>";
+					echo "<div id='recipe_info'>";
+					echo "<div id='time'>";
+					echo "		<img src='images/recipe_time.png'>";
+					echo "		<p>20분</p>";
+					echo "		<!-- <h3>20분</h3> -->";
+					echo "	</div>";
+					echo "	<div id='like'>";
+					echo "		<img src='images/recipe_like.png'>";
+					echo "		<p>802명</p>";
+					echo "		<!-- <h3>802명</h3> -->";
+					echo "	</div>";
+					echo "	</div>";
+					echo "</li>";			
+			}
+			?>				
+			</ul>	
 		</div>		
 	</div>
 	<footer>

@@ -1,0 +1,83 @@
+<!-- ! tab -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+/*            m0 tab, p0 tab*/
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            background-color: #ff0;
+/*            p10% tab*/            
+            position: relative;
+        }
+        .top>img{
+/*            반응형으로 만들떄 w100% tab 부모의 크기 100% 차지한다. 
+            자동으로 높이가 생긴다.*/
+            width: 100%;
+        }
+        .top p{
+            color: #fff;
+/*            rem = root em, 1rem = 16px*/
+            font-size: 1.5rem;
+/*            부모의 위치에 따라 정해진다는 것은 absolute*/
+            position: absolute;
+/*            반응형 웹은 무조건 %*/            
+/*            top, left 살짝 위로, 왼쪽으로 이동되야하는데. 그 공식은? transform*/
+            top: 50%;
+            left: 50%;
+/*            transform  가운데 잡기 공식이므로 암기*/
+            transform: translate(-50%, -50%);                
+        }
+        
+        .main{
+            width: 100%;
+            border: 1px solid red;
+        }
+        
+/*        main이 끝난 뒤에 after*/
+        .main:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .al{
+            width: 33.33%;
+/*            왼쪽으로 정렬*/
+            float: left;
+        }
+        .al:nth-child(1){
+            background-color: #f00;
+        }
+        .al:nth-child(2){
+            background-color: #0f0;
+        }
+        .al:nth-child(3){
+            background-color: #00f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<!--   .top tab키 누르면 자동 완성-->
+    <div class="top">
+<!--       img tab-->       
+        <img src="../images/22.jpg" alt="">
+        <p>제 1페이지</p>
+    </div>
+<!--    .main tab-->
+    <div class="main">
+<!--       .al{aa$}*3-->
+        <div class="al">aa1</div>
+        <div class="al">aa2</div>
+        <div class="al">aa3</div>
+    </div>
+<!--    .footer tab-->
+    <div class="footer">4</div>
+</body>
+</html>
