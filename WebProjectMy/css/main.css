@@ -4,6 +4,9 @@ li, header, nav, div, section, article, footer{
 *{
 	box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 body{
 	width: 1200px;
 	margin: auto;
