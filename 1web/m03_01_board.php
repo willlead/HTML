@@ -1,7 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>MyRecipe - main</title>    
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <style >
         *{
             margin: 0;
-            padding: 0;      
-            
+            padding: 0;            
         }
 
         a{
@@ -33,10 +41,10 @@
         ul{            
             width: 100%;
             display: flex;
-
+/*            position: relative;*/
         }
         ul li{
-
+/*            position: absolute;*/
             /*            width: 33%;*/
             
             text-align: center;
@@ -46,13 +54,14 @@
 /*            height: 50px;*/
             
         }
-        
         .search{
-            float: right;
-            margin-right: 5%;            
-            
+            float: right;                     
         }
-        footer{
-            text-align: center;
-            background-color: #bbb;
-        }
+    </style>
+</head>
+<body>
+  <header>      
+  <?php include 'common/header.php'?>
+  </header>   
+</body>
+</html>

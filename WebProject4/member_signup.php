@@ -38,7 +38,7 @@
         <script>
         function check_id(){
             // alert(document.member_form.id.value);
-            window.open("check_id.php?id"+document.member_form.id.value, 
+            window.open("check_id.php?id="+document.member_form.id.value, 
             "IDCheck","left=200, top=200, width=1200, height=600, scrollbars = no, resizeable=yes");
         }
 

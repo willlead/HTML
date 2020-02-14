@@ -10,7 +10,7 @@ header("Content-Type: text/html; charset=utf-8");
     //쿼리 전송 및 결과 받기
     $result = $conn->query($sql);
     $num = $result->num_rows;
-    echo $num."<br>";
+//    echo $num."<br>";
     if($num > 0) {
         echo "아이디가 중복됩니다.<br>";
         echo "다른 아이디를 사용하세요";

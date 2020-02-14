@@ -68,7 +68,7 @@
 	<header>
 	<?php include 'common/header.php';?>
 	</header>
-	<div id="contetns">9
+	<div id="contetns">
 	<?php
 //DB Connection
 include "common/dbconn.php";
