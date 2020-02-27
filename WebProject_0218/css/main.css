@@ -1,0 +1,72 @@
+header, nav, div, section, article, footer{
+	/*border: 1px dotted gray;*/
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	width: 1200px;
+	margin: auto;
+}
+header{
+	padding:5px;
+}
+header h1{
+	margin:30px;
+	text-align:center;
+}
+header h1 a{
+	text-decoration:none;
+	color:black;
+}
+div#member ul{
+	text-align:right;
+	margin: 0;
+}
+div#member li{
+	display:inline-block;
+	padding:0 10px;
+}
+div#member a{
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+}
+nav{
+	padding:0;
+}
+nav#top_menu ul{
+	background-color:#00008B;
+	margin:0;
+}
+nav#top_menu li{
+	display: inline-block;
+}
+nav#top_menu a{
+	display:block;
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+	font-size : 20px;
+	padding: 20px;
+}
+nav#top_menu a:hover{
+	background-color:red;
+}
+div#contetns{
+	padding:5px;
+}
+
+footer{
+	clear:both;
+	padding:5px;
+	background-color: #666666;
+	color:white;
+}
+footer div{
+	padding-left:10px;
+}
+footer div#short_cut a{
+	text-decoration:none;
+	color:white;
+}
